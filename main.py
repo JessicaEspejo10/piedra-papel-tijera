@@ -2,13 +2,19 @@ from random import choice
 
 #opcion seleccionada por el Usuario
 user_option = input('Realice su elección: piedra, papel o tijera ->')
-#print(type(user_option))
 user_option_lower = user_option.lower()
 
+
 #opcion seleccionada por el compurador 
-options = ['piedra','papel','tijera']
+options = ('piedra','papel','tijera')
 computer_option = choice(options)
-print('El computador eligió ', computer_option)
+
+if not user_option_lower in options:
+    print('La opción que ingresó no es válida')
+else:
+    #imprimir elecciones de usuarios
+    print('Usted eligió ', user_option_lower)
+    print('El computador eligió ', computer_option)
 
 if user_option_lower == computer_option:
     print('Empate!')
