@@ -5,23 +5,22 @@ options = ('piedra','papel','tijera')
 rounds = 1
 user_win =0
 pc_win = 0
+flag = True
 
-while True:
+while flag == True:
     
     print('-' * 50)
     print('Ronda No. ',rounds)
     print('-' * 50,'\n \n')
-
-    #opcion seleccionada por el compurador 
-    computer_option = choice(options)
-    print(computer_option)
+    
     #opcion seleccionada por el Usuario
     user_option = input('Por favor ingrese su elección: piedra, papel o tijera ->')
     user_option_lower = user_option.lower()
     print('\n')
 
+    #opcion seleccionada por el compurador 
+    computer_option = choice(options)
     
-
     if not user_option_lower in options:
         print('La opción que ingresó no es válida')
         continue
@@ -68,16 +67,17 @@ while True:
     if rounds == 3:
         if (user_win!= pc_win) & (user_win >= 2):
             print('\nESTE JUEGO HA TERMINADO!\nHA GANADO EL USUARIO!!')
-            break       
+            flag = False      
         elif (user_win!= pc_win) & (pc_win >= 2):
             print('\nESTE JUEGO HA TERMINADO!\nHA GANADO EL COMPUTADOR!!')
-            break
+            flag = False
     elif rounds > 3:
         if user_win > pc_win:
             print('\nESTE JUEGO HA TERMINADO!\nHA GANADO EL USUARIO!!')
-            break  
+            flag = False
         elif user_win < pc_win:
             print('\nESTE JUEGO HA TERMINADO!\nHA GANADO EL COMPUTADOR!!')
-            break
+            flag = False
     print('\n\n')
     rounds +=1
+    
