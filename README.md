@@ -1,4 +1,4 @@
-# condicionales
+# Piedra, papel y tijera
 
 Este es un juego de piedra papel y tijera en el cual el usuario elige un elemento y compite contra la elección aleatoria del computador.
 
