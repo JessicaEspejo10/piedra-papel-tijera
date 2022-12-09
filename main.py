@@ -1,7 +1,5 @@
 import utils
 
-
-
 if __name__ == '__main__':
     rounds = 1
     user_win =0
